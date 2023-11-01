@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Drone_img_1 from "../../Images/Drone_img-1.jpg";
+import Drone_img_1 from "../../Images/DSC_1340.JPG";
 import Drone_img_2 from "../../Images/Drone_img_2.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,7 +21,7 @@ const Banner = () => {
   const slides = [
     {
       image: Drone_img_1,
-      name: "Drone 1",
+      name: "SAMRUDHHI 10L",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {

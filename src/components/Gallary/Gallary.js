@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import gallary1 from "../../Images/gallary_1.jpeg";
-import gallary2 from "../../Images/gallary_2.jpeg";
+import gallary1 from "../../Images/product_img.jpeg";
+import gallary2 from "../../Images/Drone_img_3.jpg";
 import gallary3 from "../../Images/gallary_3.jpeg";
 
 const Gallery = () => {
-  const images = [gallary1, gallary2, gallary3, gallary1, gallary2, gallary3]; // Add more images as needed
+  const images = [gallary1, gallary2, gallary1, gallary2, gallary1, gallary2]; // Add more images as needed
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -18,34 +18,48 @@ const Gallery = () => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-gray-700 h-full object-cover">
       <h1 className="text-2xl font-semibold mb-4 text-center">Gallery</h1>
-      <div className="flex overflow-hidden gap-16 h-screen w-screen mb-8">
+      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4">
+        <button
+          onClick={prevSlide}
+          className="hidden md:block text-2xl text-gray-500 hover:text-gray-800 focus:outline-none"
+        >
+          &#8592; {/* Left arrow */}
+        </button>
         {images.slice(currentIndex, currentIndex + 2).map((image, index) => (
           <div
             key={index}
-            className="w-full h-auto md:w-1/2 p-2 transition-transform transform translate-x-0 hover:scale-105"
+            className="w-full md:w-1/2 p-2 transform hover:scale-105 transition-transform h-96"
           >
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="w-full rounded-lg shadow-md"
+              className="w-full rounded-lg shadow-lg h-full object-cover"
             />
           </div>
         ))}
+        <button
+          onClick={nextSlide}
+          className="hidden md:block text-2xl text-gray-500 hover:text-gray-800 focus:outline-none"
+        >
+          &#8594; {/* Right arrow */}
+        </button>
       </div>
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-600 focus:outline-none"
-      >
-        &#8592; {/* Left arrow */}
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 p-4 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-600 focus:outline-none"
-      >
-        &#8594; {/* Right arrow */}
-      </button>
+      <div className="flex md:hidden justify-between p-4">
+        <button
+          onClick={prevSlide}
+          className="text-2xl text-gray-500 hover:text-gray-800 focus:outline-none"
+        >
+          &#8592; {/* Left arrow */}
+        </button>
+        <button
+          onClick={nextSlide}
+          className="text-2xl text-gray-500 hover:text-gray-800 focus:outline-none"
+        >
+          &#8594; {/* Right arrow */}
+        </button>
+      </div>
     </div>
   );
 };

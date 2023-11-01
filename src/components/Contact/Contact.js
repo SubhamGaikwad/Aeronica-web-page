@@ -67,109 +67,116 @@ const Contact = () => {
           loading="priority"
         />
       </div>
-      <div className="w-full max-w-md mx-auto mt-8">
-        <form
-          className="bg-white shadow-md rounded px-4 py-6 sm:px-8 sm:py-8 mb-4"
-          style={formStyle}
-          onSubmit={handleSubmit}
-        >
-          <div className="sm:flex">
-            <div className="mb-4 sm:mr-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="name"
-              >
-                Name
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Your Name"
-                onChange={handleChange}
-                value={formData.name}
-              />
+      <div className="flex">
+        <div>details</div>
+        <div className="w-full max-w-md mx-auto mt-8 ">
+          {/* <div>
+          <img src={Drone_img_1} alt="contact-img" />
+        </div> */}
+          <form
+            className="bg-white shadow-md rounded px-4 py-6 sm:px-8 sm:py-8 mb-4"
+            style={formStyle}
+            onSubmit={handleSubmit}
+          >
+            <div className="sm:flex">
+              <div className="mb-4 sm:mr-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your Name"
+                  onChange={handleChange}
+                  value={formData.name}
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  onChange={handleChange}
+                  value={formData.email}
+                />
+              </div>
+            </div>
+            <div className="sm:flex">
+              <div className="mb-4 sm:mr-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="mobile"
+                >
+                  Mobile Number
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="mobile"
+                  name="mobile"
+                  type="text"
+                  placeholder="Your Mobile Number"
+                  onChange={handleChange}
+                  value={formData.mobile}
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Location
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="location"
+                  name="location"
+                  type="text"
+                  placeholder="Your Location"
+                  onChange={handleChange}
+                  value={formData.location}
+                />
+              </div>
             </div>
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="email"
+                htmlFor="message"
               >
-                Email
+                Message
               </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Your Email"
+              <textarea
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                id="message"
+                name="message"
+                placeholder="Your Message"
                 onChange={handleChange}
-                value={formData.email}
-              />
+                value={formData.message}
+              ></textarea>
             </div>
-          </div>
-          <div className="sm:flex">
-            <div className="mb-4 sm:mr-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="mobile"
+            <div className="flex items-center justify-center sm:justify-between">
+              <button
+                className="bg-black hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                type="submit"
               >
-                Mobile Number
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="mobile"
-                name="mobile"
-                type="text"
-                placeholder="Your Mobile Number"
-                onChange={handleChange}
-                value={formData.mobile}
-              />
+                Send
+              </button>
             </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="location"
-              >
-                Location
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="location"
-                name="location"
-                type="text"
-                placeholder="Your Location"
-                onChange={handleChange}
-                value={formData.location}
-              />
-            </div>
-          </div>
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="message"
-            >
-              Message
-            </label>
-            <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-              id="message"
-              name="message"
-              placeholder="Your Message"
-              onChange={handleChange}
-              value={formData.message}
-            ></textarea>
-          </div>
-          <div className="flex items-center justify-center sm:justify-between">
-            <button
-              className="bg-black hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
-              type="submit"
-            >
-              Send
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div className="text-center">details</div>
       </div>
     </div>
   );
