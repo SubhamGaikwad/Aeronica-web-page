@@ -65,12 +65,12 @@ const Banner = () => {
                 <h2 className="text-2xl md:text-4xl font-bold text-center">
                   {slide.name}
                 </h2>
-                <button
+                {/* <button
                   onClick={handleDetails}
                   className="bg-transparent border border-gray-500 hover:bg-gray-400 hover:text-white text-white-800 mt-6 md:mt-16 px-4 py-2 rounded duration-300"
                 >
                   Know More
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

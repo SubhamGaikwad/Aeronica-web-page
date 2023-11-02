@@ -61,11 +61,7 @@ const Team = () => {
             key={index}
             className="bg-white rounded-lg shadow-md p-4 text-center"
           >
-            <img
-              src={subham}
-              alt={member.name}
-              className="w-25 h-45 mx-auto "
-            />
+            <img src={subham} alt={member.name} className="w-25 h-45 mx-auto" />
             <p className="text-lg font-semibold">{member.name}</p>
             <p className="text-gray-500">{member.role}</p>
             <div className="social-media-icons mt-4">

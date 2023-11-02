@@ -19,7 +19,7 @@ const Footer = () => {
             alt="footer_logo"
           />
           <p className="text-white text-xs sm:text-sm tracking-wide">
-            @Aeronica.com
+            {/* @Aeronica.com */}
           </p>
           <div className="flex gap-4 sm:gap-5 text-lg text-gray-400 justify-center sm:justify-start">
             <FaFacebook className="text-2xl sm:text-lg hover:text-white duration-300 cursor-pointer" />
